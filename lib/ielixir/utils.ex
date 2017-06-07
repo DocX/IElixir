@@ -21,7 +21,7 @@ defmodule IElixir.Utils do
   @spec parse_connection_file(String.t) :: map
   def parse_connection_file(connection_file) do
     connection_file
-    |> File.read!(connection_file)
+    |> File.read!
     |> Poison.Parser.parse!
   end
 
@@ -35,4 +35,3 @@ defmodule IElixir.Utils do
     sock
   end
 end
-
